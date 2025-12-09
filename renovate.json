@@ -1,13 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  // Do not configure 'config:recommended' or 'minimumReleaseAge' - these are included in github>soxhub/renovate-config. See: https://github.com/soxhub/renovate-config
+  "extends": [
+    "github>soxhub/renovate-config"
+  ],
   "ignorePaths": [
     "**/node_modules/**",
     "packages/react-intl/example-sandboxes/**"
   ],
   "packageRules": [
     {
-      "matchManagers": ["cargo"],
+      "matchManagers": [
+        "cargo"
+      ],
       "enabled": false
     }
   ]
